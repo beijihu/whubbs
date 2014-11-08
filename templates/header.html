@@ -3,17 +3,27 @@
         <img width="100" height="100" src="{{ static_url("img/logo.png") }}" alt="珞珈山水BBS">
     </a>
 
+    <ul class="breadcrumb">
+      <li><a href="javascript:void(0);">珞珈山水BBS</a> <span class="divider">/</span></li>
+      <li><a href="javascript:void(0);">测试1层</a> <span class="divider">/</span></li>
+      <li class="active">测试2层</li>
+    </ul>
+
     <ul id="nav">
-        <li>
-            <a href="">
-                
+        <li class="items">
+            <a id="setting" href="javascript:void(0);" title="设置">
+                <img width="100" height="100" src="{{ static_url("img/icon-setting.png") }}" alt="设置">
             </a>
         </li>
-        <li>
-            
+        <li class="items">
+            <a id="login" href="javascript:void(0);" title="登录">
+                登录
+            </a>
         </li>
-        <li>
-            
+        <li class="items">
+            <a id="register" href="javascript:void(0);" title="注册">
+                注册
+            </a>
         </li>
     </ul>
 </div>
