@@ -1,15 +1,22 @@
+/* 公共样式*/
+body {
+    font-family: "Microsoft YaHei","weiruanyahei",Tahoma,SimSun;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* header.html */
 #header {
     width: 100%;
     height: 55px;
     background-color: #343434;
+    overflow: hidden;
 }
 
 #header #logo {
-    width: 55px;
-    height: 55px;
-}
-
-#header #logo {
+    float: left;
     width: 55px;
     height: 55px;
 }
@@ -20,5 +27,80 @@
 }
 
 #header #nav {
-    list-style: none;
+    float: right;
+    width: 334px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#header #nav li {
+    float: left;
+    border-left: 3px solid #6c6c6c;
+    width: 95px;
+    height: 100%;
+    text-align: center;
+    line-height: 55px;
+}
+
+#header #nav li:first-child {
+    border-left: none; 
+    line-height: 51px;
+}
+
+#header #nav li a {
+    color: #6c6c6c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#header #nav li a:hover {
+    transition: color .1s ease-out;
+    -webkit-transition: color .1s ease-out;
+    color: rgba(255,255,255,.5);
+}
+
+#header #nav li:first-child a:hover > img {
+    transition: all .1s ease-out 0 1 forwards;
+    -webkit-transition: all .1s ease-out 0 1 forwards;
+    width: 27px;
+    height: 27px;
+}
+
+#header #nav li a img {
+    width: 25px;
+    height: 25px;
+}
+
+#header .breadcrumb {
+    float: left;
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+#header .breadcrumb li {
+    text-shadow: none;
+}
+
+#header .breadcrumb li .divider {
+    padding: 0 5px;
+    color: #6c6c6c;
+    cursor: default;
+}
+
+#header .breadcrumb li a {
+    color: #6c6c6c;
+}
+
+#header .breadcrumb li a:hover {
+    transition: color .1s ease-out;
+    -webkit-transition: color .1s ease-out;
+    color: rgba(255,255,255,.7);
+}
+
+#header .breadcrumb .active {
+    color: rgba(255,255,255,.5);
+    cursor: default;
 }
