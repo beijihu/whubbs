@@ -39,5 +39,5 @@ application = tornado.web.Application([
 if __name__ == "__main__":
     port = 8888
     application.listen(port)
-    print "app running at http://localhost:%d" % (port)
+    print "app running at http://localhost: %d" % (port)
     tornado.ioloop.IOLoop.instance().start()
