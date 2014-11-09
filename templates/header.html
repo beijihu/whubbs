@@ -43,14 +43,36 @@
 <!-- login 模态框 begin -->
 <div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <div id="logoArea">
             <img width="30" height="30" src="{{ static_url("img/logo.png") }}" alt="珞珈山水BBS">
             <h3>珞珈山水BBS</h3>
         </div>
     </div>
     <div class="modal-body">
-        
+        <form id="loginForm" class="form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="inputName">用户名</label>
+            <div class="controls">
+              <input type="text" id="inputName" placeholder="用户名">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="inputPassword">密码</label>
+            <div class="controls">
+              <input type="password" id="inputPassword" placeholder="密码">
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox"> 记住我
+              </label>
+              <button id="login-btn" type="submit" class="button">登录</button>
+              <button id="login-cancel-btn" class="button" data-dismiss="modal" aria-hidden="true">取消</button>
+              <a id="anonymity" href="javascript:void(0);">匿名登录>></a>
+            </div>
+          </div>
+        </form>
     </div>
 </div>
 <!-- login 模态框 end -->
