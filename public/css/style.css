@@ -9,7 +9,6 @@ ul {
 
 .modal {
   width: 560px;
-  background-color: #ffffff;
   border: none;
   *border: none;
   -webkit-border-radius: 0;
@@ -24,6 +23,32 @@ ul {
 
 .modal-body {
     background-color: #1e7d77;
+}
+
+.modal-body .button {
+    margin: 0 auto;
+    padding: 0;
+    width: 60px;
+    height: 30px;
+    border: 2px solid #035551;
+    border-radius: 7px;
+    background: transparent;
+    color: #035551;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    cursor: pointer;
+}
+
+.modal-body .button:hover {
+    background-color: #035551;
+    color: rgba(255,255,255,.7);
+}
+
+.modal-body .button:focus {
+    outline: none;
 }
 
 /* header.html */
@@ -150,13 +175,13 @@ ul {
     text-align: center;
 }
 
-#loginModal .modal-header #logoArea {
+#logoArea {
     display: inline-block;
     text-align: center;
     overflow: hidden;
 }
 
-#loginModal .modal-header #logoArea img {
+#logoArea img {
     float: left;
     width: 30px;
     height: 30px;
@@ -164,13 +189,37 @@ ul {
     margin-right: 2px;
 }
 
-#loginModal .modal-header #logoArea h3 {
+#logoArea h3 {
     float: left;
     color: #fff;
     font-weight: normal;
     font-size: 28px;
 }
 
-#loginModal .modal-body {
-    height: 150px;
+#loginForm {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#loginForm label {
+    color: rgba(255,255,255,.6);
+}
+
+#loginForm #login-btn {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+#loginForm #login-cancel-btn {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#loginForm #anonymity {
+    float: right;
+    color: #035551;
+    font-size: 13px;
+    margin-right: 100px;
+    margin-top: 23px;
 }
