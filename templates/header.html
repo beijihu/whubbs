@@ -1,3 +1,4 @@
+<!-- header begin -->
 <div id="header">
     <a id="logo" href="javascript:void(0);" title="珞珈山水BBS">
         <img width="100" height="100" src="{{ static_url("img/logo.png") }}" alt="珞珈山水BBS">
@@ -16,12 +17,12 @@
             </a>
         </li>
         <li class="items">
-            <a id="setting" href="javascript:void(0);" title="设置">
+            <a id="setting" title="设置">
                 <img width="100" height="100" src="{{ static_url("img/icon-setting.png") }}" alt="设置">
             </a>
         </li>
         <li class="items">
-            <a id="login" href="javascript:void(0);" title="登录">
+            <a id="login" href="#loginModal" data-toggle="modal" title="登录">
                 登录
             </a>
         </li>
@@ -36,3 +37,20 @@
         <p>在线人数: <span>212</span></p>
     </div>
 </div>
+<!-- header end -->
+
+
+<!-- login 模态框 begin -->
+<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <div id="logoArea">
+            <img width="30" height="30" src="{{ static_url("img/logo.png") }}" alt="珞珈山水BBS">
+            <h3>珞珈山水BBS</h3>
+        </div>
+    </div>
+    <div class="modal-body">
+        
+    </div>
+</div>
+<!-- login 模态框 end -->

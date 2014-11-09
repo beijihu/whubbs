@@ -7,6 +7,25 @@ ul {
     list-style-type: none;
 }
 
+.modal {
+  width: 560px;
+  background-color: #ffffff;
+  border: none;
+  *border: none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.modal-header {
+    border: none;
+    background-color: #035551;
+}
+
+.modal-body {
+    background-color: #1e7d77;
+}
+
 /* header.html */
 #header {
     width: 100%;
@@ -121,4 +140,37 @@ ul {
     width: 18px;
     height: 18px;
     padding-bottom: 3px;
+}
+
+/*loginModal*/
+#loginModal .modal-header {
+    height: 150px;
+    overflow: hidden;
+    line-height: 150px;
+    text-align: center;
+}
+
+#loginModal .modal-header #logoArea {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+}
+
+#loginModal .modal-header #logoArea img {
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding-top: 2px;
+    margin-right: 2px;
+}
+
+#loginModal .modal-header #logoArea h3 {
+    float: left;
+    color: #fff;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+#loginModal .modal-body {
+    height: 150px;
 }
