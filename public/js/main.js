@@ -1,5 +1,7 @@
-// 防知乎首页模块
+// 仿知乎首页模块
 var foucs_module = (function(window, $) {
+
+    var COUNT = 9;
 
     var tabcurrent, level, tablock, start;
 
@@ -20,7 +22,7 @@ var foucs_module = (function(window, $) {
         if (tablock) return;
         foucs(start, '2', 'foucs');
         start++;
-        if (start == 16)/*页卡有n项，这里的数字就是n+1*/
+        if (start == COUNT + 1)/*页卡有n项，这里的数字就是n+1*/
             start = 1;
     };
 
@@ -35,11 +37,14 @@ var foucs_module = (function(window, $) {
 
     var run = function() {
         init();
-        tabcurrent = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+        tabcurrent = new Array();
+        for (var i = COUNT; i >= 1; i--) {
+            tabcurrent[i] = 1;
+        };
         level = setInterval(autoplay, 30000);
         tablock = 0;
         start = 1;
-        for (var l = 1; l < 16; l++)/*页卡有n项，这里的数字就是n+1*/ {
+        for (var l = 1; l < COUNT; l++)/*页卡有n项，这里的数字就是n+1*/ {
             $("#foucs_tab_" + l).mouseover(function () { tablock = 1; });
             $("#foucs_tab_" + l).mouseout(function () { tablock = 0; });
             $("#foucs_con_" + l).mouseover(function () { tablock = 1; });
