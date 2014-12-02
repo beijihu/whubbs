@@ -1,7 +1,9 @@
 /* 公共样式*/
 body {
     font-family: "Microsoft YaHei","weiruanyahei",Tahoma,SimSun;
-    background: #f1f5f8 url(/img/bg.png);
+    background: #f1f5f8 url(/static/img/bg.png);
+    padding-top: 50px;
+    padding-left: 50px;
 }
 
 ul {
@@ -54,6 +56,9 @@ ul {
 
 /* header.html */
 #header {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 50px;
     background-color: #343434;
@@ -229,9 +234,70 @@ ul {
     margin-top: 23px;
 }
 
+/*registerModal*/
+#registerModal{
+
+    margin: 0 auto;
+}
+#registerModal .modal-header {
+    height: 150px;
+    overflow: hidden;
+    line-height: 150px;
+    text-align: center;
+}
+
+#logoArea {
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+}
+
+#logoArea img {
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding-top: 2px;
+    margin-right: 2px;
+}
+
+#logoArea h3 {
+    float: left;
+    color: #fff;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+#registerForm {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+#registerForm label {
+    color: rgba(255,255,255,.6);
+}
+
+#registerForm #register-btn {
+    margin-top: 20px;
+    margin-left: -20px;
+}
+
+#registerForm #register-cancel-btn {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#registerForm #anonymity {
+    float: right;
+    color: #035551;
+    font-size: 13px;
+    margin-right: 100px;
+    margin-top: 23px;
+}
+
 /*left.html*/
 #nav_left {
-    position: fixed;
+    position: absolute;
     width: 50px;
     height: 100%;
     top: 50px;
@@ -269,7 +335,6 @@ ul {
 
 
 /****************************/
-
 
 /* Carousel base class */
 .carousel {
