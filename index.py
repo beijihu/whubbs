@@ -6,9 +6,9 @@ class IndexHandler(tornado.web.RequestHandler):
     def get(self):
         self.render("index.html", title="index")
 
-class Page1Handler(tornado.web.RequestHandler):
+class childClassHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("page1.html", title="page1")
+        self.render("childClass.html", title="childClass")
 
 class Page2Handler(tornado.web.RequestHandler):
     def get(self):
@@ -30,7 +30,7 @@ settings = {
 
 application = tornado.web.Application([
     (r"/", IndexHandler),
-    (r"/page1", Page1Handler),
+    (r"/childClass", childClassHandler),
     (r"/page2", Page2Handler),
     (r"/page3", Page3Handler),
     (r"/page4", Page4Handler),
