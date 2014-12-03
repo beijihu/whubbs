@@ -12,11 +12,17 @@
     <body>
 
         {% block container %}
-            hello, world!
+            网页出错！
         {% end %}
         
         <script src="{{ static_url("js/jquery-1.11.1.min.js") }}"></script>
         <script src="{{ static_url("js/bootstrap.min.js") }}"></script>
-        <script src="{{ static_url("js/main.js") }}"></script>
+        <!-- 全局脚本 -->
+        <script src="{{ static_url("js/global.js") }}"></script>
+        
+        <!-- 添加自定义脚本 -->
+        {% block customscript %}
+            
+        {% end %}
     </body>
 </html>

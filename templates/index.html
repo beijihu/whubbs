@@ -8,4 +8,11 @@
 
     <!--  {% include footer.html %} -->
 
+    <!-- 添加仅Index需要的脚本 -->
+    {% block customscript %}
+        <script src="{{ static_url("js/foucs.js") }}"></script>
+        <script>
+            foucs_module.run();
+        </script>
+    {% end %}
 {% end %}
