@@ -1,6 +1,6 @@
 /* 公共样式*/
 body {
-    font-family: "Microsoft YaHei","weiruanyahei",Tahoma,SimSun;
+    font-family: "Microsoft YaHei","WenQuanYi Micro Hei",Tahoma,SimSun;
     background: #f1f5f8 url(/static/img/bg.png);
     padding-top: 50px;
     padding-left: 50px;
@@ -535,79 +535,16 @@ ul {
     margin-top:12px
 }
 
-/*当窗口小于740 显示效果*/
-
-@media (max-width:768px){
-    .reps{display:none}
-    .stories{margin:15px 0}
-    .single-story{float:none;width:80%;margin:0 15px;padding:15px}
-    .author-img{top:18px;left:18px}
-    .single-story .sep{margin:12px 0}
-    .single-story+.single-story{margin-top:15px}
-    .single-story .icon-sign-spike{display:none!important}
-    .single-story,.single-story-inner{height:auto}
-    .nav_left{
-        display: none;
-    }
-}
-                        
-
-
-
-
-/************************page2************************************/
-
-.page2img{
-    
-    position: relative;
-    top:-40px;
-    left:-20%;
-    border-radius: 30px;
-    
-}
-
-.page2collect{
-    
-    position: relative;
-    top:5%;
-    left: 56%;
-    
-}
-.tableheight{
-
-  max-height: 50px;
-}
-
-
-/***********************page3******************************/
-.clear{
-  clear: both;
-}
-
-.page3title{
-  position: relative;
-  top: 0;
-  left: 10%;
-}
-.tcell{
-       display: inline;
-      border-bottom-style: dotted;
-      border-bottom-width: 1px;
-}
-
-
 /***********************childClass******************************/
 
 #cc-content {
     width: 950px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px;
     background-color: white;   
 }
 
 .cc-list {
-    width: 900px;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
@@ -617,6 +554,10 @@ ul {
     padding-top: 10px;
     min-height: 70px;
     line-height: 70px;
+}
+
+.cc-list li:hover {
+    background-color: rgba(150,150,150,.1);
 }
 
 .classItem .name {
@@ -639,7 +580,6 @@ ul {
 
 .classItem .leader span {
     font-size: 12px;
-
 }
 
 .classItem .leader_img img {
@@ -657,8 +597,250 @@ ul {
 .classItem .seq {
     clear: both;
     border: 2px dashed #ddd;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
+/***********************topicsList******************************/
+
+
+/***********************topicView******************************/
+#tv-content {
+    width: 100%;
+    min-height: 750px;
+    background-color: #fff;
+}
+
+#tv-content #articleArea {
+    width: 100%;
+    min-height: 700px;
+    background-color: white;
+    overflow: hidden;
+}
+
+#articleArea #authorArea {
+    float: left;
+    width: 130px;
+    margin-left: 200px;
+    min-height: 600px;
+    text-align: right;
+}
+
+#authorArea a {
+    color: #434343;
+    text-decoration: none;
+}
+
+#authorArea a:hover {
+    color: #242424;
+}
+
+#authorArea #authorImg {
+    margin-top: 50px;
+}
+
+#authorArea #authorImg a {
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+#authorArea #authorImg a:hover {
+    border: 2px solid #6c6c6c;
+}
+
+#authorArea #authorImg a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#authorArea #authorName {
+    min-height: 20px;
+}
+
+#authorArea #authorName h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#authorArea #authorInfo {
+    text-align: right;
+    font-size: 12px;
+    color: #6c6c6c;
+}
+
+#topicArea {
+    float: left;
+    width: 800px;
+    min-height: 600px;
+    margin-left: 50px;
+}
+
+#topicArea #topicTitle {
+    width: 700px;
+    min-height: 100px;
+    overflow:hidden;
+}
+
+#topicArea #topicTitle h1 {
+    width: 100%;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#topicArea #topicTool {
+    margin-left: 20px;
+    min-height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+#topicTool #topicRead {
+    float: left;
+    color: #777;
+    opacity: .7;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+#topicTool #topicTime {
+    float: left;
+    color: #777;
+    opacity: .7;
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+#topicArea #topicTool ul {
+    float: left;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+#topicArea #topicTool li {
+    float: left;
+    margin-left: 20px;
+}
+
+#topicArea #topicTool li a {
+    text-decoration: none;
+    color: #777;
+    opacity: .7;
+    font-size: 15px;
+}
+
+#topicArea #topicTool li a:hover {
+    opacity: 1;
+}
+
+/***自适应效果***/
+#topicTool #auther {
+    display: none;
+    overflow: hidden;
+}
+
+#topicTool #authorImg {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 1px;
+}
+
+#topicTool #authorImg img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#topicTool #authorName {
+    float: left;
+}
+
+#topicTool #authorName a {
+    display: inline-block;
+    color: #111;
+    opacity: .5;
+    text-decoration: none;
+}
+
+#topicTool #authorName a:hover{
+    opacity: .8;
+}
+
+#topicTool #authorName h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+/***********/
+
+#topicArea #topicContent {
+    width: 700px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    text-indent:2em;
+    font-size: 18px;
+    clear: both;
+}
+
+@media screen and (min-width: 1070px) and (max-width: 1250px) {
+    #articleArea #authorArea {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    #articleArea #authorArea {
+        display: none;
+    }
+
+    #topicTool #auther {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 870px) {
+    #topicArea #topicTitle,
+    #topicArea #topicContent {
+        width: 500px;
+    }
+
+    #topicTool {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #topicArea #topicTitle,
+    #topicArea #topicContent {
+        width: 250px;
+    }
+
+    #topicTool {
+        width: 300px;
+    }
+}
+
+#tv-content #commentArea {
+    width: 100%;
+    height: 500px;
+    background-color: #484848;
+}
+
+#commentArea #commentHeader {
+    width: 100%;
+    height: 70px;
+    background: #333333;
+    background: linear-gradient(to bottom, #333333, #484848);
+}
+
+/***********************topicEdit******************************/
+
+/***********************setting******************************/
+
+/***********************message******************************/
 
 
 
